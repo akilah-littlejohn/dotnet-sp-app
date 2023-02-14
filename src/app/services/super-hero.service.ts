@@ -9,6 +9,7 @@ export class SuperHeroService {
 
   constructor() {
     this.heroes = [];
+    console.log(this.heroes)
   }
   getSuperHeroes() {
     // tutorial created a class I decided to use an interface instead

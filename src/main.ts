@@ -1,7 +1,9 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from "@angular/platform-browser";
+import { TableComponent } from "./app/components/table/table.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { importProvidersFrom } from '@angular/core';
 
-import { AppModule } from './app/app.module';
+bootstrapApplication(TableComponent, {
+    providers: [importProvidersFrom(BrowserAnimationsModule)]
+})
 
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
